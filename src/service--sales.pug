@@ -1,0 +1,32 @@
+extends include/layout
+block header 
+    +header('services')
+
+block content
+    .main-content-wrapper
+        .main-content__header
+            h2.main-content-title 
+                | Sales
+            ul.breadcrumb
+                li
+                    a(href="index.html") home
+                    span.breadcrumb-Separator /
+                li
+                    a(href="our-services.html")  Our Services
+                    span.breadcrumb-Separator /
+                li
+                    span.active   Sales
+
+                
+        .main-content__body
+            .services-inner-page 
+                .content-list-wrapper 
+                    .icon-wrapper 
+                        img(src="/assets/images/Sales.svg")
+                    .content-item
+                        p.content-item__desc
+                            | sales module handles the complete sales funnel right from raising quotations & offers to creation of
+                            | payment plans & interest calculation like (Unit Blocking, Payment Plan, Expression of Interest, Offers, Quotations, Reservations, Sales Agreement, Utility Agreement, Handover, 
+                            |Delay Charges, Notices, Custom Agreement, Custom Receipt .. etc.)
+                .content-photo
+                    img(src="/assets/images/servicesDetails.png")

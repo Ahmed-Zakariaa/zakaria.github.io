@@ -1,0 +1,115 @@
+// Start Footer Style
+.footer{
+    padding: 72px 0 40px;
+    border-top: 1px solid #DCDCDC;
+    position: relative;
+    &::before {
+        content: '';
+        background: url('../images/footer-bg.svg') no-repeat;
+        background-size: cover;
+        display: block;
+        width: 100%;
+        height: 318px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+    }
+    &__content {
+        display: flex;
+        gap: 160px;
+        @include respond-below(xl) {
+            gap: 100px;
+        }
+        @include respond-below(lg) {
+            display: block;
+        }
+    }
+    &__about {
+        width: 310px;
+        @include respond-below(lg) {
+            margin-bottom: 50px;
+        }
+    }
+    &__logo {
+        margin-bottom: 1.375rem;
+    }
+    &__description {
+        font-size: 1rem;
+        line-height: 24px;
+        color: rgba($mainColor, 0.68);
+        margin-bottom: 1.5rem;;
+    }
+    &__social {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    &__social-link{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        border-radius: 5px;
+        background: rgba($mainColor, 0.1); 
+        transition: all 0.25s ease-in-out;
+        svg path {
+            transition: all 0.25s ease-in-out;
+        }
+        &:hover {
+            background: $mainColor;
+            svg path {
+                fill: #fff;
+                fill-opacity: 1;
+            }
+        }
+    }
+    &__links-container {
+        display: flex;
+        gap: 125px;;
+        @include respond-below(lg) {
+            gap: 0;
+            justify-content: space-between;  
+        }
+        @include respond-below(sm) {
+            flex-wrap: wrap;
+            justify-content: flex-start;  
+            gap: 35px;
+        }
+    }
+    &__title {
+        color: #083D5E;
+        font-size: 1.313rem;
+        font-weight: 500;
+        margin-bottom: 1.5rem;;
+    }
+    &__links-list  {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        li:not(:last-child) {
+            margin-bottom: 1.125rem;;
+        }
+        a {
+            font-size: 1rem;
+            color: rgba($mainColor, 0.68);
+            text-decoration: none;
+            transition: all 0.25s ease-in-out;
+            &:hover {
+                color: $blue;
+            }
+        }
+    }
+    &__copyright {
+        text-align: center;
+        margin-bottom: 0;
+        margin-top: 70px;
+        font-size: 1rem;
+        color: rgba($mainColor, 0.68);
+    }
+}
+// End Footer

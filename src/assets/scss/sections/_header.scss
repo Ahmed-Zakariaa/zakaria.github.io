@@ -1,0 +1,172 @@
+// Start Header Styel
+@keyframes sticky {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+
+.header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 45px 60px;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.25s ease-in-out;
+    @include respond-below(sm) {
+        padding: 45px 15px;
+    }
+    &.sticky-head {
+        background: #fff;
+        box-shadow: 0 6px 15px rgba(#000, 0.16);
+        padding: 15px 60px;
+        position: fixed;
+        animation: sticky 1s;
+        @include respond-below(sm) {
+            padding: 15px;
+        }
+    }
+    &__links {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        gap: 50px;
+        &__contact {
+            display: none;
+            @include respond-below(md) {
+                display: block;
+                padding: 25px 40px;
+                .button {
+                    display: block;
+                    text-align: center;
+                }
+            }
+        }
+        @include respond-below(md) {
+            position: fixed;
+            background: #fff;
+            flex-direction: column;
+            height: 100%;
+            width: 300px;
+            top: 0;
+            left: -300px;
+            padding: 20px 0;
+            gap: 0;
+            transition: all 0.25s ease-in-out;
+            @include respond-below(sm) {
+                width: 220px;
+            }
+        }
+    }
+    &__link-item {
+        color: rgba($mainColor, 0.7);
+        font-size: 15px;
+        font-weight: 500;
+        padding: 10px 0;
+        text-decoration: none;
+        transition: all 0.25s ease-in-out;
+        position: relative;
+        display: block;
+        &.active-link {
+            color: $mainColor;
+            @include respond-below(md) {
+                color: $blue;
+            }
+            &::before {
+                content: '';
+                display: block;
+                width: 1px;
+                height: 55px;
+                background: rgba($mainColor, 0.38);
+                position: absolute;
+                top: -49px;
+                left: 50%;
+                transform: translateX(-50%);
+                @include respond-below(md) {
+                    display: none;
+                }
+            }
+        }
+        &:hover {
+            color: $mainColor;
+        }
+        @include respond-below(md) {
+            padding: 25px 40px;
+            border-bottom: 1px solid #DCDCDC;
+            
+        }
+    }
+    &__toggle {
+        background: $secondColor;
+        border-radius: 20px;
+        padding: 10px 20px;
+        line-height: 0;
+        margin-left: auto;
+        border: 0;
+        display: none;
+        transition: all 0.25s ease-in-out;
+        &:hover {
+            background: $mainColor;
+        }
+        @include respond-below(md) {
+            display: inline-block;
+        }
+    }
+    &__contact {
+        @include respond-below(md) {
+            display: none;
+        }
+    }
+    &__mobile-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(#000, 0.7);
+        backdrop-filter: blur(10px);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: all .25s ease-in-out;
+        .close-btn {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: $mainColor;
+            cursor: pointer;
+            transition: all .25s ease-in-out;
+            @include respond-below(sm) {
+                width: 55px;
+                height: 55px;
+                top: 20px;
+                right: 20px;
+            }
+        }
+    }
+    &--mobile-active {
+        .header__mobile-overlay {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+        }
+        .header__links {
+            left: 0;
+        }
+    }
+}
+// End Header Style

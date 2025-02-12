@@ -1,0 +1,45 @@
+extends include/layout
+block header 
+    +header('services')
+
+block content
+    .main-content-wrapper
+        .main-content__header
+            h2.main-content-title 
+                | Well Being Mobile App
+            ul.breadcrumb
+                li
+                    a(href="index.html") home
+                    span.breadcrumb-Separator /
+                li
+                    a(href="our-services.html")  Our Services
+                    span.breadcrumb-Separator /
+                li
+                    span.active   Well Being Mobile App
+
+                
+        .main-content__body
+            .services-inner-page 
+                .content-list-wrapper 
+                    .icon-wrapper 
+                        img(src="/assets/images/mobile-app.svg")
+                    .content-item
+                        h4.content-item__title 
+                            |Benefit #1: Make your patient feel special:
+                        p.content-item__desc
+                            | Features & Advantages: Appointments Booking, Video Consultation, Patient Profile,
+                            | Loyalty Programs, Reports, Lab Results, Eye Measurements, Dashboard, Smart Watch integration, Vaccines reminder, Family medical files, To-Do List, Medical New,
+                            | Allergies recorded, Hydration Control, Climate Medical Advice, Log in & Settings, … etc.
+                    .content-item
+                        h4.content-item__title 
+                            |Benefit #2: Easier Operations & Less Cost:
+                        p.content-item__desc
+                            | Features & Advantages: Payment, Doctors profiles, Branches locations & Facilities,
+                            | Less human intervention, Feedback & Suggestions, Virtual Tour, Insurance approval,
+                    .content-item
+                        h4.content-item__title 
+                            |Benefit #3: Increase Awareness & Profits:
+                        p.content-item__desc
+                            | Features & Advantage: Marketing Campaigns, ROI.
+                .content-photo
+                    img(src="/assets/images/servicesDetails.png")

@@ -1,0 +1,33 @@
+extends include/layout
+block header 
+    +header('services')
+
+block content
+    .main-content-wrapper
+        .main-content__header
+            h2.main-content-title 
+                | Facility Management
+            ul.breadcrumb
+                li
+                    a(href="index.html") home
+                    span.breadcrumb-Separator /
+                li
+                    a(href="our-services.html")  Our Services
+                    span.breadcrumb-Separator /
+                li
+                    span.active Facility Management
+
+                
+        .main-content__body
+            .services-inner-page 
+                .content-list-wrapper 
+                    .icon-wrapper 
+                        img(src="/assets/images/management.svg")
+                    .content-item
+                        p.content-item__desc
+                            |Allows you to manage your inventory and work orders while also maintaining insurance
+                            | and service contracts like (Complaints Logging, Service Agreements, Insurance Agreements,
+                            | Generic Expense Agreements, Warranty Agreement,
+                            | Preventive Maintenance, Work Orders, Task creation, Payment Plan & Others)
+                .content-photo
+                    img(src="/assets/images/servicesDetails.png")

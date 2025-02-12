@@ -1,0 +1,160 @@
+﻿extends include/layout
+
+block header 
+    +header('about')
+
+block content
+    .main-content-wrapper
+        .main-content__header
+            h2.main-content-title 
+                |About Us
+            ul.breadcrumb
+                li
+                    a(href="index.html") home
+                    span.breadcrumb-Separator /
+                li
+                    span.active  About Us
+                
+
+                
+        .main-content__body
+            .services-inner-page 
+                .content-list-wrapper 
+                        .content-item
+                            h4.content-item__title 
+                                |WE:
+                            p.content-item__desc
+                                | Are a team of professional software developing experts targeting to help small & medium businesses
+                                | attain their business goals. Provide solutions that cater to any size business and are customized to
+                                | address your needs and offer peace of mind by maintaining these channels so that you may focus your time and energy on other aspects of your business.
+                        .content-item
+                            h4.content-item__title 
+                                |Offer:
+                            p.content-item__desc
+                                |You the best service with the highest quality and lowest cost in a very short time, by creative and specialized teamwork who own a huge experience in software house companies, Comprehensive and various packages in software developing
+                                | that suit the nature of your entity with competitive prices Strive to create & develop the software industry |
+                                |which is provided to the MENA region by introducing matchless & niche solutions through our experts.
+                .content-photo
+                    img(src="/assets/images/about.svg")
+            .about-grid
+                .about__icon
+                    img(src="/assets/images/concept.svg")
+
+                .about__content
+                    h3.about__content__title 
+                        |Main Concept
+                    p.about__content__desc
+                        | To present our solutions in the most cost-efficient manner for timely distribution
+                        | to our clients nationally and internationally. Also, to provide the highest possible level of service tosmall,
+                        | medium and large business owners that we serve, and to foster a challenging,
+    .management-content-wrapper
+        .about__content
+            h3.about__content__title 
+                |Management Commitment
+            p.about__content__desc
+                |in order to achieve our ambitious goals, we make customers the focus of our organization and commit to giving them only quality. 
+                | Our strictly observed quality control system supports our team in delivering the best-in-class service
+                | along the entire project cycle.
+        .card-with-icon
+            .icon-wrapper 
+                img(src="/assets/images/software.svg")
+            h3.card-title 
+                |QUALITY FOR OUR CUSTOMERS
+            p.card-desc
+                |The fast-paced growth of the local market has launched numerous large-scale projects under tight timelines amid a shortage of skilled workforce and other resources.
+                | In this demanding environment, quality standards require dealing with change and quick evaluations of our ability to meet client requirements, including the needed technical and human resources. We provide customized,
+                | cost-effective solutions thorough, timely, and transparent project management tools.
+        .card-with-icon
+            .icon-wrapper 
+                img(src="/assets/images/software.svg")
+
+            h3.card-title 
+                |QUALITY FOR OUR PARTNERS
+            p.card-desc
+                |We select partners for their product and service quality and are proud to be the official local distributor of well-known brands 
+                |with which we have maintained mutually satisfying business relationships for almost two decades.
+                | We ensure financial stability, management commitment, and highly skilled engineers and installers to create value for our partners and to maintain the reputation of their brands in our market
+        .card-with-icon
+            .icon-wrapper 
+                img(src="/assets/images/software.svg")
+
+            h3.card-title 
+                |QUALITY FOR OUR STAFF
+            p.card-desc
+                |We foster an atmosphere that encourages teamwork, creativity, and personal growth. 
+                |The training required for the company’s high quality standards is identified and provided to all staff and our employees are regularly encouraged to contribute to the improvement of quality.
+    .main-content-wrapper
+        .about-grid
+            .about__content
+                h3.about__content__title 
+                    |Vision & Mission
+                .content-item
+                        h4.content-item__title 
+                            |Vision
+                        p.content-item__desc
+                            | By 2035, To be one of the five biggest software providers in the world.
+                .content-item
+                        h4.content-item__title 
+                            |Mission
+                        p.content-item__desc
+                            | Our mission is to create & develop the software industry which is provided to the MENA region by introducing matchless & niche solutions through our experts.
+            .about__icon
+                img(src="/assets/images/mission-vision.svg")
+
+        .about-grid
+            .about__icon
+                img(src="/assets/images/objectives.svg")
+
+            .about__content
+                h3.about__content__title 
+                    |Objectives
+                .clients__content__txt 
+                    ul 
+                        li 
+                            +_("تحقيق التنفيذ الأمثل للتكنولوجيا", "optimize technology implementation")
+                        li 
+                            +_("تحسين فكر القيادة", "improve thought leadership")
+                        li 
+                            +_("تحسين عروض الخدمات", "Improve services offerings")
+                        li 
+                            +_("تحسين تجربة العملاء المخصصة", "Increase consulting knowledge sharing")
+                        li 
+                            +_("", "Improve customized customer experience")
+                        li 
+                            +_("زيادة الوعي بالحلول كشركة رائدة في الصناعة", "Increase solutions awareness as an industry leader")
+                        li 
+                            +_("زيادة الإيرادات في الأسواق المستهدفة", "Increase revenue in targeted markets")
+        .values 
+            h2.values__title 
+                +_("", "Core Values")
+            .values__content
+                .values__type 
+                    +_("", "Integrity")
+                .values__type 
+                    +_("", "Boldness")
+                .values__type 
+                    +_("", "Honesty")
+                .values__type 
+                    +_("", "Trust")
+                .values__type 
+                    +_("", "Accountability")
+                .values__type 
+                    +_("", "Commitment to Customers")
+                .values__type 
+                    +_("", "Passion Fun")
+                .values__type 
+                    +_("", "Continuous Learning")
+                .values__type 
+                    +_("", "Ownership")
+                .values__type 
+                    +_("", "Constant Improvement")
+                .values__type 
+                    +_("", "Leadership")
+                .values__type 
+                    +_("", "Diversity")
+                .values__type 
+                    +_("", "Innovation")
+                .values__type 
+                    +_("", "Quality")
+                .values__type 
+                    +_("", "Teamwork Simplicity")
