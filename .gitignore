@@ -1,8 +1,8 @@
-dist/assets/css/style*.css
-dist/assets/css/*.map
-dist/ar
-dist/en
-dist/*.html
+src/assets/css/style*.css
+src/assets/css/*.map
+src/ar
+src/en
+src/*.html
 node_modules
 .idea
 .vs
